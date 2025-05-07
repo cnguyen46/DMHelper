@@ -34,6 +34,9 @@
                 <a href="ability.html" target="_blank">
                     <button class="btnDetail"> Ability Details </button>
                 </a>
+                <a href="feedback.php" target="_blank">
+                    <button class="btnDetail"> 📩 Feedback </button>
+                </a>
             </h2>
         </section>
         <section class="box">
@@ -47,98 +50,102 @@
                 </div>
             </div>
             <!-- Form for player to name a character-->
-            <div class="flex_vertical">
-                <div class="flex_horizontal">
-                    <div class="flex_detail"> 
-                        <input type="text" id="character-name" name="character-name" placeholder="Name your character"> 
-                    </div>
-                    <div class="flex_detail">
-                        <input type="text" id="character-name" name="character-name" placeholder="Name your character"> 
-                    </div>
-                    <div class="flex_detail">
-                        <input type="text" id="character-name" name="character-name" placeholder="Name your character"> 
-                    </div>
-                    <div class="flex_detail">
-                        <input type="text" id="character-name" name="character-name" placeholder="Name your character"> 
-                    </div>
-                </div>
-            </div>
-            <div class="flex_vertical">
-                <div class="flex_horizontal">
-                    <div class="flex_detail">
-                        <!-- Class of player 1 -->
-                        <select id="class-selector-1">
-                            <option value="" disabled selected>Select a Class</option>
-                            <option value="cleric"> Cleric</option>
-                            <option value="mage"> Mage</option>
-                            <option value="ranger"> Ranger</option>
-                            <option value="rogue"> Rogue</option>
-                            <option value="warrior"> Warrior</option>
-                        </select>
-                        <h2 id="class-name-1"></h2>
-                        <div id="class-stats-1">
-                            <table id="stats-table-1">
-                            </table>
+            <form action="savePlayers.php" method="POST">
+                <div class="flex_vertical">
+                    <div class="flex_horizontal">
+                        <div class="flex_detail"> 
+                            <input type="text" id="character-name" name="character-name[]" placeholder="Name your character"> 
                         </div>
-                    </div>
-                    <div class="flex_detail">
-                        <!-- Class of player 2 -->
-                        <select id="class-selector-2">
-                            <option value="" disabled selected>Select a Class</option>
-                            <option value="cleric"> Cleric</option>
-                            <option value="mage"> Mage</option>
-                            <option value="ranger"> Ranger</option>
-                            <option value="rogue"> Rogue</option>
-                            <option value="warrior"> Warrior</option>
-                        </select>
-                        <h2 id="class-name-2"></h2>
-                        <div id="class-stats-2">
-                            <table id="stats-table-2">
-                            </table>
+                        <div class="flex_detail">
+                            <input type="text" id="character-name" name="character-name[]" placeholder="Name your character"> 
                         </div>
-                    </div>
-                    <div class="flex_detail">
-                        <!-- Class of player 3 -->
-                        <select id="class-selector-3">
-                            <option value="" disabled selected>Select a Class</option>
-                            <option value="cleric"> Cleric</option>
-                            <option value="mage"> Mage</option>
-                            <option value="ranger"> Ranger</option>
-                            <option value="rogue"> Rogue</option>
-                            <option value="warrior"> Warrior</option>
-                        </select>
-                        <h2 id="class-name-3"></h2>
-                        <div id="class-stats-3">
-                            <table id="stats-table-3">
-                            </table>
+                        <div class="flex_detail">
+                            <input type="text" id="character-name" name="character-name[]" placeholder="Name your character"> 
                         </div>
-                    </div>
-                    <div class="flex_detail">
-                        <!-- Class of player 4 -->
-                        <select id="class-selector-4">
-                            <option value="" disabled selected>Select a Class</option>
-                            <option value="cleric"> Cleric</option>
-                            <option value="mage"> Mage</option>
-                            <option value="ranger"> Ranger</option>
-                            <option value="rogue"> Rogue</option>
-                            <option value="warrior"> Warrior</option>
-                        </select>
-                        <h2 id="class-name-4"></h2>
-                        <div id="class-stats-4">
-                            <table id="stats-table-4">
-                            </table>
+                        <div class="flex_detail">
+                            <input type="text" id="character-name" name="character-name[]" placeholder="Name your character"> 
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Button to Feedback -->
-        <section>
-            <form action="feedback.html">
-                <button class="btnConfirm">FINISH</button>
+                <div class="flex_vertical">
+                    <div class="flex_horizontal">
+                        <div class="flex_detail">
+                            <!-- Class of player 1 -->
+                            <select id="class-selector-1" name="class-selector[]">
+                                <option value="" disabled selected>Select a Class</option>
+                                <option value="cleric"> Cleric</option>
+                                <option value="mage"> Mage</option>
+                                <option value="ranger"> Ranger</option>
+                                <option value="rogue"> Rogue</option>
+                                <option value="warrior"> Warrior</option>
+                            </select>
+                            <h2 id="class-name-1"></h2>
+                            <div id="class-stats-1">
+                                <table id="stats-table-1">
+                                </table>
+                            </div>
+                            <input type="hidden" name="level[]" value="1">
+                        </div>
+                        <div class="flex_detail">
+                            <!-- Class of player 2 -->
+                            <select id="class-selector-2" name="class-selector[]">
+                                <option value="" disabled selected>Select a Class</option>
+                                <option value="cleric"> Cleric</option>
+                                <option value="mage"> Mage</option>
+                                <option value="ranger"> Ranger</option>
+                                <option value="rogue"> Rogue</option>
+                                <option value="warrior"> Warrior</option>
+                            </select>
+                            <h2 id="class-name-2"></h2>
+                            <div id="class-stats-2">
+                                <table id="stats-table-2">
+                                </table>
+                            </div>
+                            <input type="hidden" name="level[]" value="1">
+                        </div>
+                        <div class="flex_detail">
+                            <!-- Class of player 3 -->
+                            <select id="class-selector-3" name="class-selector[]">
+                                <option value="" disabled selected>Select a Class</option>
+                                <option value="cleric"> Cleric</option>
+                                <option value="mage"> Mage</option>
+                                <option value="ranger"> Ranger</option>
+                                <option value="rogue"> Rogue</option>
+                                <option value="warrior"> Warrior</option>
+                            </select>
+                            <h2 id="class-name-3"></h2>
+                            <div id="class-stats-3">
+                                <table id="stats-table-3">
+                                </table>
+                            </div>
+                            <input type="hidden" name="level[]" value="1">
+                        </div>
+                        <div class="flex_detail">
+                            <!-- Class of player 4 -->
+                            <select id="class-selector-4" name="class-selector[]">
+                                <option value="" disabled selected>Select a Class</option>
+                                <option value="cleric"> Cleric</option>
+                                <option value="mage"> Mage</option>
+                                <option value="ranger"> Ranger</option>
+                                <option value="rogue"> Rogue</option>
+                                <option value="warrior"> Warrior</option>
+                            </select>
+                            <h2 id="class-name-4"></h2>
+                            <div id="class-stats-4">
+                                <table id="stats-table-4">
+                                </table>
+                            </div>
+                            <input type="hidden" name="level[]" value="1">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Button to Feedback -->
+            <section>
+                <button type="submit" class="btnConfirm">BEGIN CAMPAIGN !</button>
                 <br>
-            </form>
-        </section>
+            </section>
+        </form>
         <footer>
             <p>&copy; 2025 🧙‍♂️ DMHelper</p>
         </footer>
