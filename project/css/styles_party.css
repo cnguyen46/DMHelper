@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('../image/background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Center Content */
+.center-content {
+  width: 80%;
+  height: 100%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Header (Main Title) */
+#main-title {
+  font-family: 'Cinzel', serif;
+  font-size: 40px;
+  color: crimson;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Subtitle Styling */
+#subtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 25px;
+  color: darkred;
+  margin-bottom: 30px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th, td {
+  border: 1px solid #333;
+  background-color: whitesmoke;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+th {
+  background-color: goldenrod;
+  color: white;
+}
+
+/* Button Styling for detail */
+.btnDetail {
+  background-color: crimson;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btnDetail:hover {
+  background-color: darkorange;
+}
+
+/* Button Styling for edit */
+.btnEdit {
+  background-color: white;
+  color: #333;
+  padding: 5px 15px;
+  font-size: 16px;
+  border: 1;
+  border-radius: 5px;
+  border-color: #333;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btnEdit:hover {
+  background-color: goldenrod;
+}
+
+/* Button Styling for Save*/
+.btnSave {
+  background-color: darkgoldenrod;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btnSave:hover {
+  background-color: goldenrod;
+}
+
+/* Button Styling for Start Over*/
+.btnStartOver {
+  background-color: darkred;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btnStartOver:hover {
+  background-color: red;
+}
+
+/* Navigation */
+a {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  background-color: #333;
+  color: white;
+}
